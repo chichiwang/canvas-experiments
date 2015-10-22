@@ -1,0 +1,25 @@
+{
+  "name": "canvas-experiments",
+  "version": "0.0.0",
+  "authors": [
+    "Chi-chi Wang <chichi@wangchiyi.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "pixi.js": "~3.0.8",
+    "normalize-css": "~3.0.3",
+    "lodash": "~3.10.1"
+  }
+}

@@ -1,0 +1,70 @@
+// nib is a powerful lib for stylus that provides cross-browser css3 mixins.
+// No more vendor prefixes. http://visionmedia.github.com/nib/
+@import 'nib'
+
+$primaryColor = #bc8247
+$primaryShadow = darken($primaryColor, 30%)
+$secondaryColor = #fcefe3
+$secondaryShadow = darken($secondaryColor, 30%)
+
+*
+  box-sizing: border-box
+
+body
+  background-color: $secondaryColor
+
+header
+  padding: 10px 20px 10px 40px
+  background-color: $primaryColor
+  border-bottom: 1px solid $primaryShadow
+  
+  h1
+    position: relative
+    padding: 0 5px
+    font-size: 1.45em
+    font-weight: bold
+    color: $secondaryColor
+    text-shadow: 1px 1px 1px $primaryShadow
+    
+    &:before, &:after
+      position: absolute
+      width: 16px
+      height: @width
+      top: 5px
+      left: -20px
+      content: " "
+      border: 2px solid $secondaryColor
+      border-radius: 50%
+    &:after
+      top: 14px
+      left: -27px
+      width: 14px
+      height: 2px
+      background-color: $secondaryColor
+      border: 0
+
+section.main
+  padding-top: 2em
+  text-align: center
+
+canvas
+  border: 1px solid red
+  
+section.notes
+  ul
+    list-style: none
+    padding: 0
+    
+    a,
+    li
+      color: $primaryColor
+      color: rgba($primaryColor, 0.5)
+      text-decoration: none
+      letter-spacing: 0.05em
+      text-shadow: 0.5px 0.5px 0 $primaryShadow
+      
+    li
+      padding: 0 1em
+      
+      &:before
+        content: "· "
